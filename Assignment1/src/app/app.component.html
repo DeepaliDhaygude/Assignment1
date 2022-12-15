@@ -1,0 +1,40 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-md-10">
+    <div class="card d-flex justify-content-center">
+      <div class="card-header bg-warning">
+        <div class="text-center">
+          <h5>API Details</h5>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row pt-2">
+          <table class="table border table-bordered  ">
+            <thead>
+              <tr>
+                <th>DateTime</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>low</th>
+                <th>Close</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor="let item of mainData | keyvalue">
+                <tr *ngFor="let i of data">
+                  <td>{{item.key}}</td>
+                    <td>{{i.open}}</td>
+                    <td>{{i.high}}</td>
+                    <td>{{i.low}}</td>
+                    <td>{{i.close}}</td>
+                    <td>{{i.volume}}</td>
+                </tr>
+              </ng-container>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
